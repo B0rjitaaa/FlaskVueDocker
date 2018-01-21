@@ -120,7 +120,7 @@ export default {
       this.albums = this.getRandomFromBackend()
     },
     getRandomFromBackend () {
-      const path = `http://flask_isolated:5000/api/random` + '?artist_name=' + this.artist_name.replace(/ /g, '')
+      const path = `http://localhost:5000/api/random` + '?artist_name=' + this.artist_name.replace(/ /g, '')
       axios.get(path)
         .then(response => {
           this.albums = response.data.albums

@@ -7,9 +7,7 @@ WORKDIR /frontend
 # Borra esas lineas
 # RUN npm --user root --unsafe-perm true install npm -g
 
-RUN npm install -g --silent \
-	yarn \
-	vue-cli
+RUN npm install
 
 EXPOSE 8080
 
